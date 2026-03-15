@@ -263,46 +263,60 @@
             color: var(--accent-hover);
         }
 
-        /* Blog */
-        .blog-grid {
+        /* Featured Sections */
+        .featured-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .blog-card {
+        .featured-card {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 12px;
             overflow: hidden;
             transition: all 0.3s;
             cursor: pointer;
+            text-decoration: none;
+            display: block;
         }
 
-        .blog-card:hover {
+        .featured-card:hover {
             border-color: var(--accent);
             transform: translateY(-4px);
         }
 
-        .blog-content {
+        .featured-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--bg-tertiary);
+        }
+
+        .featured-content {
             padding: 1.5rem;
         }
 
-        .blog-date {
-            font-size: 0.8rem;
-            color: var(--accent);
+        .featured-card h3 {
+            font-size: 1.25rem;
             margin-bottom: 0.5rem;
+            color: var(--text-primary);
         }
 
-        .blog-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .blog-card p {
+        .featured-card p {
             color: var(--text-secondary);
             font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-link {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .featured-link:hover {
+            color: var(--accent-hover);
         }
 
         /* Contact */
@@ -367,8 +381,8 @@
             <a href="#" class="logo">Portfolio</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -415,37 +429,31 @@
                 <h2>Projects</h2>
                 <p>A selection of my recent work</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Project One</h3>
-                    <p>A modern web application built with React and Node.js featuring real-time data synchronization.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">MongoDB</span>
+            <div class="featured-grid">
+                <a href="projects.html" class="featured-card">
+                    <img src="https://picsum.photos/seed/project1/600/400" alt="Projects" class="featured-image">
+                    <div class="featured-content">
+                        <h3>View All Projects</h3>
+                        <p>Explore my portfolio of web applications, e-commerce platforms, and more.</p>
+                        <span class="featured-link">Browse Projects →</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p>E-commerce platform with a seamless checkout experience and admin dashboard.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Stripe</span>
-                        <span class="project-tag">PostgreSQL</span>
+                </a>
+                <a href="projects.html" class="featured-card">
+                    <img src="https://picsum.photos/seed/project2/600/400" alt="Project One" class="featured-image">
+                    <div class="featured-content">
+                        <h3>Project One</h3>
+                        <p>A modern web application built with React and Node.js.</p>
+                        <span class="featured-link">View Project →</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Project Three</h3>
-                    <p>Task management app with drag-and-drop functionality and team collaboration features.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Vue.js</span>
-                        <span class="project-tag">Firebase</span>
-                        <span class="project-tag">CSS</span>
+                </a>
+                <a href="projects.html" class="featured-card">
+                    <img src="https://picsum.photos/seed/project3/600/400" alt="Project Two" class="featured-image">
+                    <div class="featured-content">
+                        <h3>Project Two</h3>
+                        <p>E-commerce platform with seamless checkout experience.</p>
+                        <span class="featured-link">View Project →</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -456,28 +464,31 @@
                 <h2>Blog</h2>
                 <p>Thoughts on web development</p>
             </div>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <div class="blog-date">March 2026</div>
+            <div class="featured-grid">
+                <a href="blog.html" class="featured-card">
+                    <img src="https://picsum.photos/seed/blog1/600/400" alt="Blog" class="featured-image">
+                    <div class="featured-content">
+                        <h3>All Blog Posts</h3>
+                        <p>Read my latest articles on web development and technology.</p>
+                        <span class="featured-link">Read More →</span>
+                    </div>
+                </a>
+                <a href="blog.html" class="featured-card">
+                    <img src="https://picsum.photos/seed/blog2/600/400" alt="Modern CSS" class="featured-image">
+                    <div class="featured-content">
                         <h3>Getting Started with Modern CSS</h3>
-                        <p>Exploring the latest CSS features that make styling easier than ever.</p>
+                        <p>Exploring the latest CSS features that make styling easier.</p>
+                        <span class="featured-link">Read More →</span>
                     </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <div class="blog-date">February 2026</div>
+                </a>
+                <a href="blog.html" class="featured-card">
+                    <img src="https://picsum.photos/seed/blog3/600/400" alt="Accessibility" class="featured-image">
+                    <div class="featured-content">
                         <h3>Building Accessible Web Apps</h3>
-                        <p>Why accessibility matters and how to implement it in your projects.</p>
+                        <p>Why accessibility matters and how to implement it.</p>
+                        <span class="featured-link">Read More →</span>
                     </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <div class="blog-date">January 2026</div>
-                        <h3>JavaScript Performance Tips</h3>
-                        <p>Practical ways to optimize your JavaScript code for better performance.</p>
-                    </div>
-                </article>
+                </a>
             </div>
         </div>
     </section>
