@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Modern CSS - My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a1628;
+            --bg-secondary: #12243d;
+            --bg-tertiary: #1a3254;
+            --text-primary: #e8eef5;
+            --text-secondary: #8fa3bf;
+            --accent: #3b82c4;
+            --accent-hover: #5ca0d9;
+            --border: #2a4570;
+            --max-width: 800px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 22, 40, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        .article-header {
+            padding: 120px 0 2rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .article-header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            background: var(--bg-secondary);
+        }
+
+        .article-content {
+            padding-bottom: 4rem;
+        }
+
+        .article-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-hover);
+        }
+
+        footer {
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 1.75rem;
+            }
+            .article-image {
+                height: 220px;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="article-header">
+            <a href="../blog.html" class="back-link">← Back to Blog</a>
+            <div class="article-meta">
+                <span>March 2026</span>
+                <span>•</span>
+                <span>5 min read</span>
+            </div>
+            <h1>Getting Started with Modern CSS</h1>
+        </header>
+
+        <img src="https://picsum.photos/seed/blogpost1/1200/600" alt="Modern CSS" class="article-image">
+
+        <div class="article-content">
+            <p>CSS has come a long way in recent years. With new features like Grid, Flexbox, custom properties, and container queries, building complex layouts has never been easier. In this article, we'll explore the latest CSS features that make styling easier than ever.</p>
+
+            <h2>CSS Grid</h2>
+            <p>CSS Grid is a powerful layout system that allows you to create complex two-dimensional layouts with ease. Unlike Flexbox which is primarily one-dimensional, Grid lets you control both rows and columns simultaneously.</p>
+
+            <h2>Custom Properties</h2>
+            <p>CSS custom properties (also known as CSS variables) allow you to define reusable values throughout your stylesheet. This makes theming and maintenance much simpler.</p>
+
+            <h2>Container Queries</h2>
+            <p>Container queries are a game-changer for responsive design. Instead of basing styles on viewport size, you can now style elements based on their container's size.</p>
+
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Use CSS Grid for two-dimensional layouts</li>
+                <li>Leverage custom properties for maintainable code</li>
+                <li>Embrace container queries for truly responsive components</li>
+                <li>Explore new pseudo-classes like :has() for advanced styling</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
